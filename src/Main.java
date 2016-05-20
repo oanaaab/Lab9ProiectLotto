@@ -21,7 +21,7 @@ public class Main {
             for (int x = 0; x < i; x++) {
                 if (Mynumbers[i] == randomNum)
                 {
-                    randomNum = (int) (Math.random() * 50);
+                    randomNum = (int) (Math.random() * 50); //
                 }
 
             }
