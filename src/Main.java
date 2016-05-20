@@ -9,11 +9,30 @@ public class Main {
 
 //Generare Numere Loto
         Set<Integer> NrLoto = new GenNr().nrgen();
+        NrLoto.toArray();
 
 
 //Generare Numere Proprii
 
-        Set<Integer> MyNumbers = new GenNr().nrgen();
+        int[] Mynumbers = new int[6];
+        int randomNum;
+
+        for (int i = 0; i < 6; i++)
+        {
+            randomNum = (int) (Math.random() * 50); //Random number created here.
+            for (int x = 0; x < i; x++)
+            {
+                if (Mynumbers[i] == randomNum) // Here, code checks if same random number generated before.
+                {
+                    randomNum = (int) (Math.random() * 50);//If random number is same, another number generated.
+                }
+
+            }
+            Mynumbers[i] = randomNum;
+        }
+
+        for (int i = 0; i < Mynumbers.length; i++)
+            System.out.print(Mynumbers[i] + " ");
 
 //Comparare Nr Loto vs Nr Proprii + reia generarea de numere pana cand se ghicesc minim 3
 
@@ -21,10 +40,13 @@ public class Main {
         int tenta= 0;
 
         do {
-            for (int nr : NrLoto) {
-                if (MyNumbers.contains(nr)) {
-                    nrguess++;
-                    tenta=nr;
+            tenta++;
+            for (int i=0; i<Mynumbers.length; i++)
+                    System.out.println("hello ");
+           if( NrLoto == Mynumbers[] ) {
+                System.out.println("bum");
+                nrguess++;
+                    }
 
                     if (nrguess == 3) {
                         System.out.println("Felicitari,azi esti castigator in categoria III");
@@ -46,22 +68,23 @@ public class Main {
                     }
 
                 }
+        while (nrguess<3);
             }
-        }
-        while (MyNumbers.contains(nrguess));
 
-        System.out.println("Ai reusit sa ghicesti " + nrguess + " numere din " + tenta +" inceercari.");
-        System.out.println("Numerele tale au fost: "+MyNumbers);
-        System.out.println("Numerele cautate erau:" +NrLoto);
 
-        if (nrguess>3) {
-            System.out.println("Ai reusit sa ghicesti cel putin 3 numere din " + tenta + " incercari");
-        }
-        if (nrguess>4) {
-            System.out.println("Ai reusit sa ghicesti cel putin 4 numere din " + tenta + " incercari");
-        }
-        if (nrguess>5) {
-            System.out.println("Ai reusit sa ghicesti cel putin 5 numere din " + tenta + " incercari");
-        }
+
+//        System.out.println("Ai reusit sa ghicesti " + nrguess + " numere din " + tenta +" inceercari.");
+//        System.out.println("Numerele tale au fost: "+MyNumbers);
+//        System.out.println("Numerele cautate erau:" +NrLoto);
+//
+//        if (nrguess>3) {
+//            System.out.println("Ai reusit sa ghicesti cel putin 3 numere din " + tenta + " incercari");
+//        }
+//        if (nrguess>4) {
+//            System.out.println("Ai reusit sa ghicesti cel putin 4 numere din " + tenta + " incercari");
+//        }
+//        if (nrguess>5) {
+//            System.out.println("Ai reusit sa ghicesti cel putin 5 numere din " + tenta + " incercari");
+//        }
     }
-}
+//}
