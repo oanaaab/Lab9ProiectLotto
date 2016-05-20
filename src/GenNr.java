@@ -18,7 +18,6 @@ public class GenNr {
             boolean success = setofSix.add(nr);
             if (success) { // nr not already in the set
                 counter++;
-                System.out.print( nr  + ": ");
             }
         }
         while (counter < 6);
