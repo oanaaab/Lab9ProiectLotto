@@ -9,7 +9,6 @@ public class Main {
 
 //Generare Numere Loto
         Set<Integer> NrLoto = new GenNr().nrgen();
-        NrLoto.toArray();
 
 
 //Generare Numere Proprii
@@ -37,35 +36,38 @@ public class Main {
         int tenta = 0;
 
         do {
-            tenta++;
-            for (int i=0; i<Mynumbers.length; i++){
-                    System.out.println("hello ");
-           if( NrLoto.equals(Mynumbers[i])){
-                System.out.println("bum");
+            for (int i = 0; i < Mynumbers.length; i++) {
+                System.out.println(Mynumbers[i]);
+                tenta++;
+                //   if (Mynumbers[i] == NrLoto) {
                 nrguess++;
-                    }
+            }
+            System.out.println("test");
+//                nrguess++;
+//                tenta++;
 
-                    if (nrguess == 3) {
-                        System.out.println("Felicitari,azi esti castigator in categoria III");
-                        break;
-                    }
-                    if (nrguess == 4) {
-                        System.out.println("Felicitari, esti castigator in categoria IV");
-                        System.out.println("Ai reusit sa ghicesti cel putin 4 numere din " + tenta + " incercari");
-                        break;
-                    }
-                    if (nrguess == 5) {
-                        System.out.println("Felicitari esti castigator al categoriei V");
-                        System.out.println("Ai reusit sa ghicesti cel putin 5 numere din " + tenta + " incercari");
-                        break;
-                    }
-                    if (nrguess == 6) {
-                        System.out.println("Esti marele castigator! Nu pierde biletul!");
-                        System.out.println("Ai reusit sa ghicesti toate numere din " + tenta + " incercari");
-                    }
 
-                }}
-        while (nrguess<3);
+        if (nrguess == 3) {
+            System.out.println("Felicitari,azi esti castigator in categoria III");
+            break;
+        }
+        if (nrguess == 4) {
+            System.out.println("Felicitari, esti castigator in categoria IV");
+            System.out.println("Ai reusit sa ghicesti cel putin 4 numere din " + tenta + " incercari");
+            break;
+        }
+        if (nrguess == 5) {
+            System.out.println("Felicitari esti castigator al categoriei V");
+            System.out.println("Ai reusit sa ghicesti cel putin 5 numere din " + tenta + " incercari");
+            break;
+        }
+        if (nrguess == 6) {
+            System.out.println("Esti marele castigator! Nu pierde biletul!");
+            System.out.println("Ai reusit sa ghicesti toate numere din " + tenta + " incercari");
+        }
+    }
+
+        while (nrguess < 3) ;
 
 
         System.out.println("Ai reusit sa ghicesti " + nrguess + " numere din " + tenta + " inceercari.");
@@ -81,6 +83,7 @@ public class Main {
         if (nrguess > 5) {
             System.out.println("Ai reusit sa ghicesti cel putin 5 numere din " + tenta + " incercari");
         }
-    }
-    }
 
+
+    }
+}
