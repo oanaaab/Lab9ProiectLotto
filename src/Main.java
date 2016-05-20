@@ -17,11 +17,11 @@ public class Main {
         int randomNum;
 
         for (int i = 0; i < 6; i++) {
-            randomNum = (int) (Math.random() * 50); //Random number created here.
+            randomNum = (int) (Math.random() * 50);
             for (int x = 0; x < i; x++) {
-                if (Mynumbers[i] == randomNum) // Here, code checks if same random number generated before.
+                if (Mynumbers[i] == randomNum)
                 {
-                    randomNum = (int) (Math.random() * 50);//If random number is same, another number generated.
+                    randomNum = (int) (Math.random() * 50);
                 }
 
             }
