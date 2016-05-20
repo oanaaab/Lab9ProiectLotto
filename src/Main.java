@@ -74,13 +74,13 @@ public class Main {
         System.out.println("Numerele tale au fost: " + Mynumbers[0] + " " + Mynumbers[1] + " " + Mynumbers[2] + " " + Mynumbers[3] + " " + Mynumbers[4] + " " + Mynumbers[5] + " ");
         System.out.println("Numerele cautate erau:" + NrLoto);
 
-        if (nrguess > 3) {
+        if (nrguess > 2) {
             System.out.println("Ai reusit sa ghicesti cel putin 3 numere din " + tenta + " incercari");
         }
-        if (nrguess > 4) {
+        if (nrguess > 3) {
             System.out.println("Ai reusit sa ghicesti cel putin 4 numere din " + tenta + " incercari");
         }
-        if (nrguess > 5) {
+        if (nrguess > 4) {
             System.out.println("Ai reusit sa ghicesti cel putin 5 numere din " + tenta + " incercari");
         }
 
